@@ -1,0 +1,6 @@
+<svg width="250" height="44" viewBox="0 0 250 44" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="28" height="24" rx="6" fill="#111"/>
+  <path d="M14 30c6-10 16-10 22 0" stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="48" y="30" font-family="Inter, system-ui" font-weight="700" font-size="24" fill="#111">RideCortex</text>
+</svg>
+

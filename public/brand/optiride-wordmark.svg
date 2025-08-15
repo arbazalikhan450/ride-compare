@@ -1,0 +1,23 @@
+<svg width="280" height="64" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <rect x="0" y="8" width="64" height="48" rx="14" fill="url(#g)"/>
+  <path d="M22 24c6 0 10 4 10 10s-4 10-10 10-10-4-10-10" stroke="#fff" stroke-width="3" fill="none"/>
+  <circle cx="20" cy="46" r="3" fill="#fff"/><circle cx="42" cy="46" r="3" fill="#fff"/>
+  <text x="76" y="46" font-family="Inter, system-ui, -apple-system" font-weight="800" font-size="36" fill="#0b0f19">OptiRide</text>
+</svg>
+<svg width="220" height="44" viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#111"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+  <rect x="2" y="8" width="44" height="28" rx="10" fill="url(#g)"/>
+  <path d="M18 16c4 0 7 3 7 7s-3 7-7 7-7-3-7-7" stroke="#fff" stroke-width="2" fill="none"/>
+  <circle cx="16" cy="30" r="2" fill="#fff"/><circle cx="28" cy="30" r="2" fill="#fff"/>
+  <text x="56" y="30" font-family="Inter, system-ui" font-weight="700" font-size="24" fill="#111">OptiRide</text>
+</svg>
+

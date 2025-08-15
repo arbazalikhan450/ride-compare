@@ -1,0 +1,14 @@
+<svg width="220" height="44" viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="44" y2="44">
+      <stop stop-color="#111111"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="8" rx="10" width="44" height="28" fill="url(#g)"/>
+  <path d="M18 16c4 0 7 3 7 7s-3 7-7 7-7-3-7-7" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <circle cx="16" cy="30" r="2" fill="#ffffff"/>
+  <circle cx="28" cy="30" r="2" fill="#ffffff"/>
+  <text x="56" y="31" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" font-size="24" fill="#0b0f19">OptiRide</text>
+</svg>
+
