@@ -27,6 +27,7 @@ export default function Home() {
   const [sortBy, setSortBy] = useState<"price" | "eta">("price");
   const [dateStr, setDateStr] = useState<string>(() => new Date().toISOString().slice(0, 10));
   const [timeStr, setTimeStr] = useState<string>("12:00");
+  const [fromCoord, setFromCoord] = useState<{ lat: number; lon: number } | null>(null);
   const [overlayOpen, setOverlayOpen] = useState(false);
 
   async function compare() {
