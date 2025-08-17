@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import RideCard from "./components/RideCard";
 import FooterStats from "./components/FooterStats";
 import GeoButton from "./components/GeoButton";
@@ -25,10 +26,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"price" | "eta">("price");
   const [dateStr, setDateStr] = useState<string>(() => new Date().toISOString().slice(0, 10));
-  const [timeMode, setTimeMode] = useState<"now" | "custom">("now");
   const [timeStr, setTimeStr] = useState<string>("12:00");
-  const [fromCoord, setFromCoord] = useState<{ lat: number; lon: number } | null>(null);
-  const [toCoord, setToCoord] = useState<{ lat: number; lon: number } | null>(null);
   const [overlayOpen, setOverlayOpen] = useState(false);
 
   async function compare() {
@@ -44,8 +42,9 @@ export default function Home() {
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || "Failed");
       setResults(json.results || []);
-    } catch (e: any) {
-      setError(e?.message || "Something went wrong");
+    } catch (e: unknown) {
+      const errorMessage = e instanceof Error ? e.message : "Something went wrong";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -60,9 +59,11 @@ export default function Home() {
         <div className="relative z-10 px-6 bg-gradient-to-b from-black/40 to-white/0 min-h-[360px] flex items-center justify-center">
           <div className="max-w-5xl mx-auto text-center flex flex-col items-center justify-center gap-3">
             <div className="mt-2">
-              <img
+              <Image
                 src="/brand/optiride-stacked.svg?v=1"
                 alt="OptiRide"
+                width={128}
+                height={128}
                 className="h-28 md:h-32 mx-auto"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = "/brand/optiride-icon.svg?v=5";

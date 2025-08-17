@@ -184,9 +184,10 @@ export async function POST(request: Request) {
       currency: "USD",
       results,
     });
-  } catch (error) {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "Unexpected server error";
     return NextResponse.json(
-      { error: "Unexpected server error" },
+      { error: errorMessage },
       { status: 500 }
     );
   }

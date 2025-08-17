@@ -22,7 +22,7 @@ export default function DatePicker({ value, onChange }: Props) {
 
   useEffect(() => {
     function onDoc(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as any)) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         setOpen(false);
       }
     }

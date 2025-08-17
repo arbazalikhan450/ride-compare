@@ -15,7 +15,7 @@ export default function TimePicker({ mode, onToggle, value, onChange }: Props) {
 
   useEffect(() => {
     function onDoc(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as any)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     }
     function onEsc(e: KeyboardEvent) { if (e.key === 'Escape') setOpen(false); }
     document.addEventListener("mousedown", onDoc);
