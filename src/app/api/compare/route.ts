@@ -6,6 +6,12 @@ type GeocodeResult = {
   display_name: string;
 };
 
+type NominatimResult = {
+  lat: string;
+  lon: string;
+  display_name?: string;
+};
+
 type CompareRequest = {
   from?: string;
   to?: string;
@@ -43,7 +49,7 @@ async function geocode(query: string): Promise<GeocodeResult | null> {
     cache: "no-store",
   });
   if (!res.ok) return null;
-  const data = (await res.json()) as Array<any>;
+  const data = (await res.json()) as Array<NominatimResult>;
   if (!data || data.length === 0) return null;
   const first = data[0];
   return {
